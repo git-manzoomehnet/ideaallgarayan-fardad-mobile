@@ -1,0 +1,194 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
+    <member name="seolist" type="list" request="cat" id="[##cms.query.catid##]"></member>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##cms.query.catid##]">
+    <member name="productList" type="list" size="260x260" />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20">
+    <member request="cat" type="tree" name="productCat" parentid="21181" />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20">
+    <member request="cat" type="tree" name="filter" parentid="21182" size="260x260"></member>
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <basis core="print" datamembername="db.seolist">
+        <face>
+            <title>[##cms.seo.title|db.seolist.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+        </face>
+    </basis>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/new/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/new/css/outputMobile.css">
+
+
+    <style>
+        html {
+            font-size: unset;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="productList overflow-hidden">
+        <basis core="call" file="header-mobile.inc" />
+        <div class="section1 pt-[100px] bg-b7">
+
+            <h1 class="text-2xl mb-4 mr-5 font-IRANSansWeb700 text-white" dir="rtl">
+                محصولات
+            </h1>
+            <basis core="print" datamembername="db.productCat">
+                <layout>
+
+                    <div class="sliderSection">
+                        <div class="swiper productsList relative px-3" dir="rtl">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+
+                                @child
+                            </div>
+                            <div class="nextCat block absolute right-3 z-1 top-[50%]">
+                                <svg width="41" height="41" viewBox="0 0 41 41" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="41" height="41" fill="#2E3192" />
+                                    <path class="disPath duration-500"
+                                        d="M14.7602 9.29297L26.2402 20.773L14.7602 32.253" stroke="white"
+                                        stroke-width="1.64" />
+                                </svg>
+                            </div>
+                            <div class="prevCat block absolute left-3 z-1 top-[50%]">
+                                <svg class="rotate-180" width="41" height="41" viewBox="0 0 41 41" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="41" height="41" fill="#2E3192" />
+                                    <path class="disPath duration-500"
+                                        d="M14.7602 9.29297L26.2402 20.773L14.7602 32.253" stroke="white"
+                                        stroke-width="1.64" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </layout>
+                <face filter="catid in (21182,21183,209714)">
+                    <div
+                        class="swiper-slide h-auto bg-[#00000033] duration-1000 bg-gradient-to-b hover:from-[#F2673740] hover:to-[#0C0D2640]">
+                        <div class="proBox">
+                            <a href="/@link" title="@title"
+                                class="relative flex items-center justify-center h-full w-full">
+                                <div class="imgS pb-[74px]">
+                                    <img src="[##cms.cms.cdn##]/images/m-@catid.png" alt="@title" title="@title">
+                                </div>
+                                <div class="overTitle right-6 bottom-7 absolute" dir="rtl">
+                                    <p class="title font-IRANSansWeb500 text-2xl text-white mb-5">
+                                        @title
+                                    </p>
+                                    <a href="/@link" title="@title"
+                                        class="callBtn w-[185px] h-[45px] bg-b4 rounded-md justify-center  flex items-center gap-x-1"
+                                        dir="rtl">
+                                        <span class="w-3 h-3 bg-b8 rounded-full block"></span>
+                                        <p class="font-IRANSansWeb500 text-sm text-gray-500">مشاهده محصولات</p>
+                                    </a>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </face>
+            </basis>
+        </div>
+        <div class="section2 mt-0.5 border-t border-white bg-b7" dir="rtl">
+            <div class="external-dropdown">
+                <div class="outer h-[50px] items-center px-5 gap-x-6">
+                    <div class="side">
+
+
+                        <basis core="tree" datamembername="db.filter" idcol="catid" parentidcol="parentid"
+                            nullvalue="21181">
+
+                            <face level="1">
+                                <div class="dropdown">
+
+                                    <button
+                                        class="dropdown-toggle flex items-center justify-center gap-x-3 font-IRANSansWeb300 text-base text-white"
+                                        type="button" data-toggle="dropdown">
+                                        @title
+                                        <svg width="21" height="11" viewBox="0 0 21 11" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 0.75L10.5 10.25L20 0.75" stroke="white" />
+                                        </svg>
+
+                                    </button>
+
+
+
+
+                                    <ul class="dropdown-menu pt-4 bg-b7" dir="rtl">
+                                        @child
+                                    </ul>
+
+                                </div>
+
+                            </face>
+                            <face level="2">
+                                <li class="mb-4 filterBtn" data-project="/loadProducts.inc?catid=@catid&refresh=true"><a
+                                        class="text-right font-IRANSansWeb300 text-sm text-white/[0.5]"
+                                        href="javascript:void(0);">@title</a></li>
+                            </face>
+                        </basis>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="section3 " dir="rtl">
+            <div class="listContainer mt-[110px] px-4 mb-[200px]">
+                <basis core="print" datamembername="db.productList">
+
+                    <else-layout>
+                        <div class="para">
+                            <p>
+                                متاسفانه محصولی در این دسته موجود نیست.
+                            </p>
+                        </div>
+                    </else-layout>
+                    <face>
+                        <div class="proBox mb-40 shadow-[0_23px_40px_rgb(0,0,0,0.1)] px-8 pb-8">
+                            <a href="/@link" title="@title" class="text-center">
+                                <div class="imgS -mt-14 flex items-center justify-center">
+                                    <img class="-mt-14" src="/@00260X00260prp" alt="@title" title="@title" />
+                                </div>
+                                <div class="name">
+                                    <p class="font-IRANSansWeb500 text-sm mt-7">
+                                        @title
+                                    </p>
+                                </div>
+                            </a>
+
+                            <a href="/@link"
+                                class="mt-4 mx-auto callBtn duration-1000 w-[128px] h-[45px] bg-b4 rounded-md justify-center right-20 bottom-5 flex items-center gap-x-1">
+                                <span class="w-3 h-3 bg-b8 rounded-full block"></span>
+                                <p class="font-IRANSansWeb500 text-sm text-gray-500">
+                                    مشاهده
+                                </p>
+                            </a>
+                        </div>
+
+                    </face>
+                </basis>
+            </div>
+        </div>
+        <basis core="call" file="footer-mobile-1.inc" />
+    </div>
+    <basis core="call" file="script-mobile.inc" />
+    <script src="[##cms.cms.cdn##]/_js/bootstrap3.3.7.min.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.6.min.js"></script>
+    <script src="[##cms.cms.cdn##]/new/js/productList-mobile.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/outputMobile.css">
+</head>
+<body>
+    <main class="blogList bg-main_light" dir="rtl">
+        <section class="section1 mb-5 w-90p mx-auto pt-[120px]">
+            <h1 class=" mb-5 font-YekanBakh700 text-lg text-dark_gray">
+
+                بلاگ
+            </h1>
+
+            <div class="filters">
+                <ul class="overflow-x-auto flex gap-x-5">
+                    <li data-blog="/load-blog.inc?catid=@catid" class="border border-main rounded-[40px] px-2 py-1 bg-white/[0.25] filterBtn duration-500">
+                        <span class="font-IRANSans400 text-sm text-text_black text-nowrap">
+                            همه‌ی مقالات
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section2 mb-5 relative w-90p mx-auto">
+            <div class="loaderContainer absolute hidden items-center justify-center inset-0 bg-white/[0.6]">
+
+                <div class="loader"></div>
+            </div>
+
+            <div class="blogContainer">
+                <div class="blogItem mb-8 rounded-[35px] border border-text_black px-4 py-5">
+                    <div class="imgS mb-5 rounded-[35px] overflow-hidden">
+                        <a class="w-full h-full" href="" title="@title">
+                            <img src="images/image 35.png" class="w-full" alt="">
+                        </a>
+                    </div>
+                    <div class="title mb-4 justify-between items-center flex">
+                        <a href="" title="@title">
+    
+                            <h2 class="font-IRANSans500 text-[15px] text-text_black">
+                                مراقبت مو
+                            </h2>
+                        </a>
+                        <span class="font-IRANSans400 text-sm text-text_black">
+                            بهمن ۱۴۰۲
+                        </span>
+                    </div>
+                    <div class="para font-IRANSans400 text-sm text-text_black text-justify">
+                        <p>
+                            برنامه روزانه مراقبت از مو چیست؟ چگونه یک روال منظم برای موهای خود داشته باشیم؟
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="js/jQuery.js"></script>
+    <script src="js/blogList-mobile.js"></script>
+</body>
+</html>
