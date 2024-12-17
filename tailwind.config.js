@@ -88,6 +88,8 @@ module.exports = {
     },
     translate: {
       100: "-100%",
-    },
+    }, backgroundImage: {
+      'backimg': "url('/images/back.png')",
+    }
   },
 };

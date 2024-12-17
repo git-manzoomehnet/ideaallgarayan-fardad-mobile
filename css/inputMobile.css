@@ -256,3 +256,12 @@ a {
 .homePage .footerScrollTop {
   display: none;
 }
+.hiddencat {
+  opacity: 1;
+  bottom: 0px;
+}
+
+.btnchange {
+  rotate: -90deg;
+
+}

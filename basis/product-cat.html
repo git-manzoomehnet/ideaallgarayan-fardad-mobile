@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لیست محصولات</title>
+    <link rel="stylesheet" href="css/outputMobile.css">
+</head>
+
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20">
+    <member request="navcatid" type="tree" name="nav" parentid="211831" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="211825">
+    <member name="list" size="320x304" type="list" />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20">
+    <member request="cat" type="tree" name="productCat1" parentid="211813"
+        postsql="select * from [db.productCat1] where parentid=211813" link="product-list.bc" />
+</basis>
+
+<body>
+    <main class="blogList bg-main_light h-full" dir="rtl">
+        <basis core="call" file="header1.inc" pageindex="[##cms.cms.pageindex##]" />
+
+
+        <section class="section1 mb-5 w-90p mx-auto pt-[120px]">
+            <h2 class="text-dark_gray text-[18px] font-YekanBakh700 leading-7 ">دسته‌بندی محصولات</h2>
+        </section>
+
+        <section class="section2 pb-5 relative w-90p mx-auto">
+            <div class="containerProductCat flex flex-col items-center gap-3">
+                <basis core="repeater" name="rep" datamembername="db.productCat1">
+                    <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20">
+                        <member request="cat" type="tree" name="productCatHover" parentid="[##rep.current.catid##]" />
+                    </basis>
+                    <div class="w-full h-[375px] border-[1px] border-white ">
+                        <button
+                            class="clickToShowcat relative w-full h-[48px] border-b-[1px] border-white flex items-center justify-start p-[10px]">
+                            <h3 class="font-IRANSans500 text-[18px] text-dark_gray">[##rep.current.title##]</h3>
+                            <span class="arrowtoclcik duration-500 absolute left-[10px] top-[35%]">
+                                <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.97416 18L0 9L8.97416 0L9.99903 1.02879L2.05168 9L10 16.9712L8.97416 18Z"
+                                        fill="#434343" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="relative w-full h-[calc(100%-48px)]  p-[10px] overflow-y-hidden">
+                            <div
+                                class="showlistcat absolute flex justify-center items-center gap-[30px] overflow-y-hidden z-10 top-0 opacity-0 bottom-[400px] duration-500 left-0 right-0 bg-main_light/[0.6] p-[10px]">
+                                <basis core="print" datamembername="db.productCatHover">
+                                    <layout>
+                                        <ul class="[&>li>a]:text-black [&>li>a]:text-[14px] [&>li>a]:font-IRANSans500">
+                                            @child
+                                        </ul>
+                                    </layout>
+                                    <face filter="catid <>[##rep.current.catid##] ">
+                                        <li><a href="/@link" title="@title">@title</a></li>
+                                    </face>
+                                </basis>
+
+                            </div>
+                            <a href="/@link">
+                                <img class="w-full h-full" src="[##cms.cms.cdn##]/[##rep.current.image##]" alt="">
+
+                            </a>
+                        </div>
+
+                    </div>
+                </basis>
+            </div>
+
+
+
+        </section>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+
+</body>
+<script>
+    const btnshowcat = document.querySelectorAll(".clickToShowcat")
+    btnshowcat.forEach((e) => {
+        e.addEventListener("click", (s) => {
+            e.parentElement.querySelector(".arrowtoclcik").classList.toggle("btnchange")
+            e.parentElement.querySelector(".showlistcat").classList.toggle("hiddencat")
+        })
+
+    })
+</script>
+
+
+
+
+
+</html>
