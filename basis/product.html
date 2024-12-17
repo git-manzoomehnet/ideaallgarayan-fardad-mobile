@@ -25,11 +25,9 @@
             <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
         </face>
     </basis>
-    <link rel='stylesheet' href='[##cms.cms.cdn##]/css/bootstrap.min.css'>
 
     <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
     <basis core="call" file="styles-mobile.inc" />
-    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/mobile-form.css">
 
 </head>
 
@@ -40,7 +38,7 @@
             <basis core="print" datamembername="db.product">
 
                 <face filter="TypeID=150">
-                    <h1 class="font-YekanBakh700 text-lg text-dark_gray mb-4">
+                    <h1 class="font-YekanBakh700 titlePro text-lg text-dark_gray mb-4">
                         @Answer
                     </h1>
 
@@ -131,30 +129,28 @@
         </section>
         <section class="section3 mb-10 w-90p mx-auto">
             <button type="button"
-                class="btn bg-text_black rounded-[15px] py-2.5 px-16 text-white font-IRANSans400 text-sm mb-10 hover:text-white focus:text-white outline-none hover:outline-none focus:outline-none w-full"
+                class="btn openModal bg-text_black rounded-[15px] py-2.5 px-16 text-white font-IRANSans400 text-sm mb-10 hover:text-white focus:text-white outline-none hover:outline-none focus:outline-none w-full"
                 data-toggle="modal" data-target=".bs-example-modal-new">
                 فرم سفارش محصول
             </button>
 
 
-            <div class="modal fade bs-example-modal-new" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-                aria-hidden="false">
 
-                <div class="modal-dialog">
+                <div class="modal-Container pt-5 z-10 fixed duration-1000 inset-0 h-svh w-svw bg-black/[0.3] -translate-y-[100%]">
 
                     <!-- Modal Content: begins -->
-                    <div class="modal-content">
+                    <div class="modal-content bg-white rounded-[20px] w-90p mx-auto h-full overflow-y-auto">
 
                         <!-- Modal Header -->
-                        <div class="modal-header border-0">
+                        <div class="modal-header border-0 w-90p mx-auto text-[30px]">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                    aria-hidden="true">&times;</span></button>
+                                    aria-hidden="true">×</span></button>
                         </div>
 
                         <!-- Modal Body -->
                         <div class="modal-body formPage">
                             <div class="body-message">
-                                <h4 class="font-IRANSans400 text-lg text-dark_gray mb-5">
+                                <h4 class="font-IRANSans400 text-lg text-dark_gray mb-5 w-90p mx-auto">
                                     سفارش محصول
                                 </h4>
 
@@ -222,7 +218,6 @@
 
                 </div>
 
-            </div>
 
             <basis core="print" datamembername="db.product">
                 <face filter="TypeID not in (159,144,150)">
@@ -279,10 +274,10 @@
 
     <script src="[##cms.cms.cdn##]/_js/basiscore-2.30.1.min.js"></script>
 
-    <script src='[##cms.cms.cdn##]/_js/bootstrap3.3.7.min.js'></script>
+    <!-- <script src='[##cms.cms.cdn##]/_js/bootstrap3.3.7.min.js'></script> -->
     <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.5.min.js"></script>
     <script src="[##cms.cms.cdn##]/js/productShow-mobile.js"></script>    
-        <script src="[##cms.cms.cdn##]/js/mobile-form.js"></script>
+        <script src="[##cms.cms.cdn##]/js/mobile-productForm.js"></script>
 
 
 

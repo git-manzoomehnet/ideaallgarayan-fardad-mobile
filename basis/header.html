@@ -1,5 +1,5 @@
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > <member request="cat" type="tree" name="productCat" parentid="211813"/> </basis>
-<header dir="rtl" class="h-[80px] z-2 w-full fixed border-b duration-500 border-b-white flex items-center justify-center">
+<header dir="rtl" class="h-[80px] z-[12] w-full fixed border-b duration-500 border-b-white flex items-center justify-center">
     <div class="grid w-90p mx-auto grid-cols-3">
         <div class="menuBar flex items-center">
             <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,19 +13,17 @@
             </a>
         </div>
         <div class="searchIcon flex items-center justify-end">
-            <a aria-label="search" href="/search.bc" title="search">
 
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.20463 0C3.23269 0 0 3.19855 0 7.12855C0 11.0585 3.23269 14.2571 7.20463 14.2571C11.1766 14.2571 14.4093 11.0585 14.4093 7.12855C14.4093 3.19614 11.1766 0 7.20463 0ZM7.20463 13.2891C3.76944 13.2891 0.975907 10.5251 0.975907 7.12614C0.975907 3.72722 3.76944 0.963187 7.20463 0.963187C10.6398 0.963187 13.4333 3.72722 13.4333 7.12614C13.4333 10.5251 10.6374 13.2891 7.20463 13.2891Z" fill="white"/>
                     <path d="M13.8774 13.1703C13.6895 12.9795 13.3797 12.9771 13.1869 13.163C12.9942 13.3489 12.9918 13.6555 13.1796 13.8462L15.1631 15.8546C15.2583 15.9512 15.3852 15.9995 15.512 15.9995C15.634 15.9995 15.7584 15.9536 15.8536 15.8619C16.0463 15.676 16.0488 15.3694 15.8609 15.1787L13.8774 13.1703Z" fill="white"/>
                 </svg>
-            </a>
                 
         </div>
     </div>
 </header>
 
-<div dir="rtl" class="openHeader h-[80px] opacity-0 z-1 duration-500 flex bg-light_gray/[0.5] w-full fixed items-center justify-center border-b border-b-text_black">
+<div dir="rtl" class="openHeader h-[80px] z-[11] opacity-0 duration-500 flex bg-light_gray/[0.5] w-full fixed items-center justify-center border-b border-b-text_black">
     <div class="innerHeader w-90p mx-auto grid grid-cols-3">
         <div class="empty"></div>
         <div class="logo flex items-center justify-center">
@@ -147,5 +145,27 @@
           </ul>
 
       </div>
+    </div>
+</div>
+
+<div class="searchContainer duration-1000 z-10 h-svh w-svw fixed inset-0 -translate-y-[100%]" style="background: url(images/53bdf7604232d1bfe411c4be7887ff15.png);">
+    <div class="innerSearch h-full w-full  relative after:absolute after:w-full after:h-full after:bg-gradient-to-b after:from-black/[0.2] after:to-black/[0] after:inset-0">
+       <div class="w-90p h-full mx-auto flex flex-col relative z-1 justify-center">
+           <button type="button" class="close mb-5 mt-[120px] absolute top-0 text-[30px] text-white" data-dismiss="modal" aria-label="Close"><span
+               aria-hidden="true">×</span></button>
+   
+           <form role="search" id="searchform" action="/search.bc" method="get" class="rounded-[5px] border border-lightPink flex items-center px-3">
+               <input name="q" type="search" class="searchInput bg-main_light/[0] py-4 w-full font-IRANSans400 text-base text-lightPink" placeholder="جست و جو کنید..." />
+               <div class="buttonSearch flex">
+                   <button type="button" name="buttonSearch" title="buttonSearch">
+                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M7.20463 0C3.23269 0 0 3.19855 0 7.12855C0 11.0585 3.23269 14.2571 7.20463 14.2571C11.1766 14.2571 14.4093 11.0585 14.4093 7.12855C14.4093 3.19614 11.1766 0 7.20463 0ZM7.20463 13.2891C3.76944 13.2891 0.975907 10.5251 0.975907 7.12614C0.975907 3.72722 3.76944 0.963187 7.20463 0.963187C10.6398 0.963187 13.4333 3.72722 13.4333 7.12614C13.4333 10.5251 10.6374 13.2891 7.20463 13.2891Z" fill="white"/>
+                           <path d="M13.8774 13.1703C13.6895 12.9795 13.3797 12.9771 13.1869 13.163C12.9942 13.3489 12.9918 13.6555 13.1796 13.8462L15.1631 15.8546C15.2583 15.9512 15.3852 15.9995 15.512 15.9995C15.634 15.9995 15.7584 15.9536 15.8536 15.8619C16.0463 15.676 16.0488 15.3694 15.8609 15.1787L13.8774 13.1703Z" fill="white"/>
+                       </svg>
+                   </button>
+               </div>
+           </form>
+
+       </div>
     </div>
 </div>
