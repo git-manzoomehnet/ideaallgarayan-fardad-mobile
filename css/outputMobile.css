@@ -833,14 +833,14 @@ video {
   margin-bottom: 3rem;
 }
 
-.my-\[80px\] {
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
-
 .my-\[15px\] {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.my-\[80px\] {
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .-mt-14 {

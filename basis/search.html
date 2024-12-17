@@ -17,7 +17,7 @@
     .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background:#E8E1E3;
+        background: #E8E1E3;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -46,13 +46,13 @@
                     <input id="searchbtn"
                         class="w-full px-[14px] h-[55px] text-right rounded-[5px] border-[1px] bg-[#E8E1E3] border-[#181818]"
                         placeholder="جست و جو کنید" type="text" value="[##cms.query.q##]">
-                    <label class="absolute top-[20px] left-[6px]" for="searchbtn">
+                    <button class="absolute top-[20px] left-[6px]" for="searchbtnv">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M13.92 13.92L17 17M16.111 8.581C16.111 12.768 12.728 16.162 8.556 16.162C4.383 16.162 1 12.768 1 8.582C1 4.393 4.383 1 8.555 1C12.728 1 16.111 4.394 16.111 8.581Z"
                                 stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                    </label>
+                    </button>
                 </div>
             </div>
             <div class="sectionProduct">
@@ -74,9 +74,10 @@
                                         <div class="product w-full h-[405px] flex justify-center flex-col">
                                             <div class="relative">
                                                 <a href="@link">
-                                                    <img src="[##cms.cms.cdn##]/@00259X00304prp" alt="" class="w-full h-[304px] bg-slate-500">
+                                                    <img src="[##cms.cms.cdn##]/@00259X00304prp" alt=""
+                                                        class="w-full h-[304px] bg-slate-500">
                                                 </a>
-                                                
+
                                                 <div class="absolute flex flex-row gap-1 bottom-3 right-5">
                                                     <button>
                                                         <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
@@ -101,7 +102,7 @@
                                                     <a href="@link">
                                                         <p class="text-[18px] leading-[28px] font-[500]">@title</p>
                                                     </a>
-                                                    
+
                                                     <!-- <p class="py-[10px]">
                                                         <svg width="96" height="15" viewBox="0 0 96 15" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
@@ -164,22 +165,26 @@
                                         <div
                                             class="blog w-[320px] h-[429px] rounded-[35px] border-[1px] p-[15px] border-[#181818]">
                                             <a href="@link">
-                                                <img src="[##cms.cms.cdn##]/@00349X00289prp" alt="" class="w-full rounded-[30px] h-[289px] bg-slate-500">    
+                                                <img src="[##cms.cms.cdn##]/@00349X00289prp" alt=""
+                                                    class="w-full rounded-[30px] h-[289px] bg-slate-500">
                                             </a>
                                             <div class="flex flex-row justify-between">
                                                 <div>
                                                     <a href="@link">
-                                                        <p class="text-[15px] leading-[23px] mt-[5px] font-[500] text-[#181818]">@title</p>
-                                                    </a>                                                    
-                                                    <p class="text-[14px] leading-[21px] mt-[10px] text-[#181818]">@substr</p>
+                                                        <p
+                                                            class="text-[15px] leading-[23px] mt-[5px] font-[500] text-[#181818]">
+                                                            @title</p>
+                                                    </a>
+                                                    <p class="text-[14px] leading-[21px] mt-[10px] text-[#181818]">
+                                                        @substr</p>
                                                 </div>
-        
+
                                             </div>
                                         </div>
                                     </div>
                                 </face>
                             </basis>
-                            
+
 
                         </div>
                     </div>
@@ -193,7 +198,7 @@
                 </div>
                 <div class="containerEvent flex gap-5 justify-center items-start flex-row flex-wrap">
                     <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">                            
+                        <div class="swiper-wrapper">
                             <basis core="print" datamembername="db.eventList">
                                 <layout>
                                     @child
@@ -204,23 +209,27 @@
                                         <div
                                             class="product w-[389px] h-[436px] p-[15px] flex justify-center flex-col border-[1px] border-[#434343] gap-5">
                                             <a href="@link">
-                                                <img src="[##cms.cms.cdn##]/@00349X00289prp" alt="" class="w-full h-[292px] bg-slate-500">
+                                                <img src="[##cms.cms.cdn##]/@00349X00289prp" alt=""
+                                                    class="w-full h-[292px] bg-slate-500">
 
                                             </a>
                                             <div class="flex flex-row justify-between">
                                                 <div>
                                                     <a href="">
-                                                        <p class="text-[18px] leading-[28px] mt-[5px] font-[500] text-[#181818]">@title</p>
+                                                        <p
+                                                            class="text-[18px] leading-[28px] mt-[5px] font-[500] text-[#181818]">
+                                                            @title</p>
                                                     </a>
-                                                    <p class="text-[15px] leading-[23px] mt-[10px] text-[#181818]">@substr</p>
+                                                    <p class="text-[15px] leading-[23px] mt-[10px] text-[#181818]">
+                                                        @substr</p>
                                                 </div>
-        
+
                                             </div>
                                         </div>
                                     </div>
                                 </face>
                             </basis>
-                            
+
 
                         </div>
                     </div>
@@ -244,6 +253,25 @@
             clickable: true,
         },
     })
+
+    const inputElement = document.querySelector('#searchbtn');
+    const sendButton = document.querySelector('#searchbtnv');
+    function sendValue() {
+        console.log('OK');
+        const inputValue = inputElement.value.trim()
+        if (inputValue !== '') {
+            const destinationPage = `pytest.bc?q=${encodeURIComponent(inputValue)}`;
+            window.location.href = destinationPage;
+        }
+    }
+    sendButton.addEventListener('click', sendValue);
+
+    inputElement.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            sendValue();
+        }
+    });
+
 </script>
 
 </html>
