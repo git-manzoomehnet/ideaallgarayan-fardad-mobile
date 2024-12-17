@@ -1,6 +1,9 @@
 .formPage [data-bc-part-container] {
   width: 100%;
 }
+.formPage [data-bc-answer-container] {
+  width: 100%;
+}
 .formPage [data-bc-part] {
   margin: 0;
 }
