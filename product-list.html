@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لیست محصولات</title>
+    <link rel="stylesheet" href="css/outputMobile.css">
+    <!-- <basis core="call" file="styles-mobile.inc" /> -->
+</head>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20">
+    <member request="navcatid" type="tree" name="nav" parentid="211831" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="211825">
+<member name="list" size="320x304" type="list" />
+</basis>
+
+
+<body>
+    <basis core="call" file="header1.inc" pageindex="[##cms.cms.pageindex##]" />
+    <main class="blogList bg-main_light" dir="rtl">
+        <section class="section1 mb-5 w-90p mx-auto pt-[120px]">
+            <h4 class="navigtion text-dark_gray flex gap-2 text-[15px] [&>span]:font-YekanBakh700 [&>span]:text-[15px]  font-YekanBakh700">
+                <basis core="print" datamembername="db.nav">
+                    <span>@title /</span>
+                    <span>@title /</span>
+                    <span>@title /</span>
+                    <face filter="RowNumber>1">
+                        
+                    </face>
+                </basis>
+            </h4>
+            <h2 class="text-dark_gray text-[18px] font-YekanBakh700 leading-7 ">محافظ مو</h2>
+            
+            <p class="text-dark_gray text-[14px] font-YekanBakh400 leading-7">برای محافظت و مراقبت از موهای خود
+                می‌توانید از
+                محافظ‌های موی کارسل استفاده کنید.</p>
+        </section>
+        <section class="section2 mb-5 relative w-90p mx-auto">
+            <div class="containerProductList flex flex-col items-center gap-10">
+                <basis core="print" datamembername="db.list">
+                    <face>
+                        <div class="product w-full max-w-[320px] h-[370px] mb-[20px]">
+                            <div class="productImg">
+                                <img src="[##cms.cms.cdn##]/@00320X00304prp" alt="@title" title="@title"  class="w-full h-[304px]">
+                            </div>
+                            <div class="productTitle h-[51px] py-[15px] mt-[15px]">
+                                <a class="text-dark_gray text-[15px] font-IRANSans500" href="@link">@title</a>
+                            </div>
+                        </div>
+                        
+                    </face>
+                </basis>
+                
+            </div>
+
+
+
+        </section>
+    </main>
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    <basis core="call" file="script-mobile.inc" />
+
+</body>
+<script>
+    const navigtion = document.querySelectorAll(".navigtion span")
+    navigtion[navigtion.length - 1].style.color = "#FC578C"
+</script>
+    
+    
+
+
+
+</html>
