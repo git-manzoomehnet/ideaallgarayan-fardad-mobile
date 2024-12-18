@@ -376,6 +376,7 @@ a {
   font-size: 15px;
   line-height: 23.48px;
   font-family: "IRANSans500";
+  color: #434343 !important;
 }
 .formEstekhdam fieldset:nth-child(1) .afterStar:nth-child(1) [data-bc-schema-info-part="1"] [data-bc-part-related-cell]::after {
   right: 27px;
