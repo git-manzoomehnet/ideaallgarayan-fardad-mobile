@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/outputMobile2.css">
+    <link rel="stylesheet" href="../css/outputMobile2.css">
     <basis core="call" file="styles-mobile.inc" />
     <title>search</title>
 </head>
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="sectionProduct">
-                <div class="titleproduct mb-0 my-[80px]">
+                <div class="titleproduct mb-0 my-[20px]">
                     <h3 class="text-[18px] leading-[27px] font-[500] text-[#434343]"> نتایج جستجو در محصولات</h3>
                 </div>
                 <div
@@ -82,7 +82,7 @@
                                                         class="w-full h-[304px] bg-slate-500">
                                                 </a>
 
-                                                <div class="absolute flex flex-row gap-1 bottom-3 right-5">
+                                                <!-- <div class="absolute flex flex-row gap-1 bottom-3 right-5">
                                                     <button>
                                                         <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +99,7 @@
                                                                 fill="#434343" />
                                                         </svg>
                                                     </button>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="flex flex-row justify-between">
                                                 <div>
@@ -151,7 +151,7 @@
             </div>
 
             <div class="sectionBlog mt-[45px]">
-                <div class="titleblog mb-[35px] my-[80px]">
+                <div class="titleblog mb-[25px]">
                     <h3 class="text-[18px] leading-[27px] font-[500] text-[#434343]"> نتایج جستجو در بلاگ</h3>
                 </div>
                 <div class="containerBlog flex gap-5 justify-center items-start flex-row flex-wrap">
@@ -194,8 +194,8 @@
 
             </div>
 
-            <div class="sectionEvent mt-[45px] mb-[35px]">
-                <div class="titleEvent mb-[35px] my-[80px]">
+            <div class="sectionEvent mt-[45px] mb-[71px] ">
+                <div class="titleEvent mb-[35px]">
                     <h3 class="text-[18px] leading-[27px] font-[500] text-[#434343]"> نتایج جستجو در رویدادها</h3>
                 </div>
                 <div class="containerEvent flex gap-5 justify-center items-start flex-row flex-wrap">
@@ -269,10 +269,9 @@ console.log(inputElement);
 console.log(sendButton);
     
     function sendValue() {
-        console.log('OK');
         const inputValue = inputElement.value.trim()
         if (inputValue !== '') {
-            const destinationPage = `pytest.bc?q=${encodeURIComponent(inputValue)}`;
+            const destinationPage = `search.bc?q=${encodeURIComponent(inputValue)}`;
             window.location.href = destinationPage;
         }
     }

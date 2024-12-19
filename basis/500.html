@@ -1,23 +1,27 @@
-<html lang="en">
+<html lang="fa">
 
 <head>
+    <title>500</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/outputMobile2"> 
-    <link rel="stylesheet" href="../css/outputMobile2.css">
-    <title>500</title>
+    <link rel="stylesheet" href="../css/outputMobile2.css"> 
+    <basis core="call" file="styles-mobile.inc" />
+
 </head>
 
 <body class="bg-backimg bg-cover bg-no-repeat bg-fixed">
-    <div class="w-full mx-auto ">
-        <basis core="call" file="header1.inc" pageindex="[##cms.cms.pageindex##]" />
-        <div class="w-full h-[100vh] flex  flex-col justify-center items-center">
-            <h5 class="text-[128px] leading-[200px] font-[700] text-light_gray">+500</h5>
+    <div class="w-full mx-auto">
+        <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
+        <div class="w-full h-[100vh] bg-back-gradient flex  flex-col justify-center items-center">
+            <h5 class="text-[128px] leading-[200px] font-IRANSansW text-light_gray">500+</h5>
             <h4 class="text-[20px] leading-[31px] text-[#434343] ">صفحه مورد نظر یافت نشد</h4>
-            <a href="#" class="w-[162px] text-[14px] mt-[48px] flex justify-center items-center h-[34px] text-dark_gray rounded-[29px] bg-[#ffffff31] border-[1px] border-main">بازگشت به صفحه نخست</a>
+            <a href="/" class="w-[162px] text-[14px] mt-[48px] flex justify-center items-center h-[34px] text-white rounded-[29px] bg-[#ffffff33] border-[1px] border-main">بازگشت به صفحه نخست</a>
         </div>
     </div>
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
 
 </body>
+<basis core="call" file="script-mobile.inc" />
+<script src="[##cms.cms.cdn##]/_js/basiscore-2.30.1.min.js"></script>
 
 </html>

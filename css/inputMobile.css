@@ -37,6 +37,16 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "IRANSansW";
+  src: url("../_fonts/IRANSansWeb.eot.ttf");
+  src: url("../_fonts/IRANSansWeb.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/IRANSansWeb.woff") format("woff"),
+    url("../_fonts/IRANSansWeb.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "IRANSans400";
   src: url("../_fonts/IRANSansFaNum-Regular.eot");
   src: url("../_fonts/IRANSansFaNum-Regular.eot?#iefix")

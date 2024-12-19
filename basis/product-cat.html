@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لیست محصولات</title>
-    <link rel="stylesheet" href="css/outputMobile2.css">
+    <link rel="stylesheet" href="../css/outputMobile2.css">
     <basis core="call" file="styles-mobile.inc" />
 </head>
 
@@ -30,7 +30,7 @@
         </section>
 
         <section class="section2 pb-5 relative w-90p mx-auto">
-            <div class="containerProductCat flex flex-col items-center gap-3">
+            <div class="containerProductCat flex flex-col items-center gap-5">
                 <basis core="repeater" name="rep" datamembername="db.productCat1">
                     <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20">
                         <member request="cat" type="tree" name="productCatHover" parentid="[##rep.current.catid##]" />
@@ -52,7 +52,7 @@
                                 class="absolute flex justify-center items-center gap-[30px] overflow-y-hidden z-10 top-0 opacity-0 showlistcat bottom-[400px] duration-500 left-0 right-0 bg-main_light/[0.6] p-[10px]">
                                 <basis core="print" datamembername="db.productCatHover">
                                     <layout>
-                                        <ul class="[&>li>a]:text-black [&>li>a]:text-[14px] [&>li>a]:font-IRANSans500">
+                                        <ul class="flex flex-col gap-[30px] [&>li>a]:text-black [&>li>a]:text-[14px] [&>li>a]:font-IRANSans500">
                                             @child
                                         </ul>
                                     </layout>

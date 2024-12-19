@@ -33,6 +33,8 @@ module.exports = {
       IRANSans400: ["IRANSans400"],
       IRANSans500: ["IRANSans500"],
       IRANSans700: ["IRANSans700"],
+      IRANSansW: ["IRANSansW"],
+
      
     },
     extend: {
@@ -90,6 +92,7 @@ module.exports = {
       100: "-100%",
     }, backgroundImage: {
       'backimg': "url('/images/back.png')",
+      'back-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%)',
     }
   },
 };
