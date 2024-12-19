@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لیست محصولات</title>
-    <link rel="stylesheet" href="../css/outputMobile2.css">
+    <link rel="stylesheet" href="css/outputMobile2.css">
+    <basis core="call" file="styles-mobile.inc" />
+
 </head>
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20">
     <member request="navcatid" type="tree" name="nav" parentid="[##cms.query.catid##]" />
@@ -20,10 +22,10 @@
 
 <body>
     <main class="blogList bg-light_gray" dir="rtl">
-        <basis core="call" file="header1.inc" pageindex="[##cms.cms.pageindex##]" />
+        <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
 
         <section class="section1 pb-5 w-90p mx-auto pt-[120px]">
-            <ul class="flex items-center  flex-wrap">
+            <ul class="navigtion flex items-center  flex-wrap">
             <basis core="print" datamembername="db.nav">
                           
                 <face filter="parentcatid not in (211479,'[##cms.query.catid##]')">
@@ -43,7 +45,7 @@
             <basis core="print" datamembername="db.productCatt">
                 
                 <face filter="catid = '[##cms.query.catid##]'">
-                    <h1 class="font-YekanBakh700 text-[48px] text-dark_gray">
+                    <h1 class="font-YekanBakh700 text-[15px] text-dark_gray">
                       @title
                     </h1>
                     <div class="para text-dark_gray text-[14px] font-YekanBakh400 leading-7">
@@ -123,10 +125,14 @@
 
 </body>
 <script>
-    const navigtion = document.querySelectorAll(".navigtion span")
-    navigtion[navigtion.length - 1].style.color = "#FC578C"
+    const navigtion = document.querySelectorAll(".navigtion li")
+    navigtion[navigtion.length - 1].querySelector("a").style.color = "#FC578C"
+    navigtion[navigtion.length - 1]?.querySelector('span')?.remove();
+
 </script>
 
+<basis core="call" file="script-mobile.inc" />
+<script src="[##cms.cms.cdn##]/_js/basiscore-2.30.1.min.js"></script>
 
 
 

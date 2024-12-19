@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لیست محصولات</title>
-    <link rel="stylesheet" href="../css/outputMobile2.css">
+    <link rel="stylesheet" href="css/outputMobile2.css">
+    <basis core="call" file="styles-mobile.inc" />
 </head>
 
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20">
@@ -48,7 +49,7 @@
                         </button>
                         <div class="relative w-full h-[calc(100%-48px)]  p-[10px] overflow-y-hidden">
                             <div
-                                class="showlistcat absolute flex justify-center items-center gap-[30px] overflow-y-hidden z-10 top-0 opacity-0 bottom-[400px] duration-500 left-0 right-0 bg-main_light/[0.6] p-[10px]">
+                                class="absolute flex justify-center items-center gap-[30px] overflow-y-hidden z-10 top-0 opacity-0 showlistcat bottom-[400px] duration-500 left-0 right-0 bg-main_light/[0.6] p-[10px]">
                                 <basis core="print" datamembername="db.productCatHover">
                                     <layout>
                                         <ul class="[&>li>a]:text-black [&>li>a]:text-[14px] [&>li>a]:font-IRANSans500">
@@ -61,10 +62,7 @@
                                 </basis>
 
                             </div>
-                            <a href="/@link">
                                 <img class="w-full h-full" src="[##cms.cms.cdn##]/[##rep.current.image##]" alt="">
-
-                            </a>
                         </div>
 
                     </div>
@@ -88,9 +86,7 @@
 
     })
 </script>
-
-
-
-
+<basis core="call" file="script-mobile.inc" />
+<script src="[##cms.cms.cdn##]/_js/basiscore-2.30.1.min.js"></script>
 
 </html>
