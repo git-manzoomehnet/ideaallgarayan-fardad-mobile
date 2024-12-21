@@ -749,6 +749,10 @@ video {
   top: 80px;
 }
 
+.left-\[20px\] {
+  left: 20px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -838,14 +842,14 @@ video {
   margin-bottom: 15px;
 }
 
-.my-\[80px\] {
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
-
 .my-\[20px\] {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.my-\[80px\] {
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .-mt-14 {
@@ -920,8 +924,16 @@ video {
   margin-bottom: 20px;
 }
 
+.mb-\[25px\] {
+  margin-bottom: 25px;
+}
+
 .mb-\[35px\] {
   margin-bottom: 35px;
+}
+
+.mb-\[71px\] {
+  margin-bottom: 71px;
 }
 
 .mr-5 {
@@ -986,14 +998,6 @@ video {
 
 .mt-\[5px\] {
   margin-top: 5px;
-}
-
-.mb-\[25px\] {
-  margin-bottom: 25px;
-}
-
-.mb-\[71px\] {
-  margin-bottom: 71px;
 }
 
 .box-border {
@@ -1185,6 +1189,10 @@ video {
 
 .h-svh {
   height: 100svh;
+}
+
+.h-\[200px\] {
+  height: 200px;
 }
 
 .min-h-\[78vh\] {
@@ -2923,6 +2931,10 @@ video {
   padding-top: 130px;
 }
 
+.pt-\[180px\] {
+  padding-top: 180px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2987,6 +2999,10 @@ video {
   font-family: IRANSans500;
 }
 
+.font-IRANSansW {
+  font-family: IRANSansW;
+}
+
 .font-YekanBakh400 {
   font-family: YekanBakh400;
 }
@@ -2997,10 +3013,6 @@ video {
 
 .font-YekanBakh700 {
   font-family: YekanBakh700;
-}
-
-.font-IRANSansW {
-  font-family: IRANSansW;
 }
 
 .text-2xl {
